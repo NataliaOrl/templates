@@ -18,7 +18,7 @@ def bus_stations(request):
     page_number = int(request.GET.get('page', 1))
     paginator = Paginator(CONTENT, 10)
     page = paginator.get_page(page_number)
-    bus_stations = CONTENT[(page_number- 1) * 10:page_number  * 10]
+    bus_stations = CONTENT[(page_number - 1) * 10:page_number * 10]
 
     context = {
         'bus_stations': bus_stations,
